@@ -45,6 +45,7 @@ def feature_engineering(data):
     target.value_counts()
     features_train,features_valid,target_train,target_valid=train_test_split(features,target,test_size=0.30,random_state=seed)
     df_test.to_csv(test_path+'df_test.csv',index=False)
+    
     return features_train,features_valid,target_train,target_valid
 
 
