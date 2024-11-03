@@ -58,7 +58,7 @@ def preprocessing_data(data):
     data['repayment_status']=data['pay_6']
     data_excluded=data.loc[:,'pay_0':'pay_amt6']
     data.drop(data_excluded.columns,axis=1,inplace=True)
-    data.drop(['outlier'],axis=1)
+    data.drop(['outlier'],axis=1,inplace=True)
     
     output_data_path='./files/intermediate/'
     if not os.path.exists(output_data_path):

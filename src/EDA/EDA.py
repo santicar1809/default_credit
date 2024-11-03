@@ -40,7 +40,7 @@ def eda():
     sns.lineplot(x='age',y='limit_bal',hue='sex',data=data,ax=ax2[0])
     sns.lineplot(x='age',y='total_pay',hue='sex',data=data,ax=ax2[1])
     sns.lineplot(x='age',y='total_bill',hue='sex',data=data,ax=ax2[2])
-    ax2.set_title('Age vs metrics')
+    ax2[0].set_title('Age vs metrics')
     plt.tight_layout
     fig2.savefig(eda_path+'age.png')
 
@@ -65,3 +65,9 @@ def eda():
     ax5.bar(clases_df.index,clases_df)
     ax5.set_title('Clases distribution')
     fig5.savefig(eda_path+'clases.png')
+    
+    #Correlation matrix
+    data_corr=data.corr()
+    fig6,ax6=plt.subplots()
+    sns.heatmap(data_corr,annot=True,cmap='coolwarm',fmt=".2f",ax=ax6)
+    fig6.savefig(eda_path+'correlation_matrix.png')
