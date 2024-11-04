@@ -1,0 +1,35 @@
+model,best_estimator,accuracy,f1,roc_auc
+lgbm,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=2)),
+                ('lgbm',
+                 LGBMClassifier(lambda_l1=0.5, max_depth=5, min_data_leaf=20,
+                                n_estimators=50, random_state=12345))])",0.6098090277777778,0.6335099877700775,0.6099815763001142
+xg,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=2)),
+                ('xg',
+                 XGBClassifier(alpha=0.5, base_score=None, booster=None,
+                               callbacks=None, colsample_bylevel=None,
+                               colsample_bynode=None, colsample_bytree=None,
+                               device=None, early_stopping_rounds=None,
+                               enable_categorical=False, eval_metric=None,
+                               feature_types=None, gamma=0, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=None,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=3, max_leaves=None,
+                               min_child_weight=None, missing=nan,
+                               monotone_constraints=None, multi_strategy=None,
+                               n_estimators=30, n_jobs=None,
+                               num_parallel_tree=None, ...))])",0.6115451388888888,0.6369904684648144,0.6117318277892692
+cat,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=2)),
+                ('cat',
+                 <catboost.core.CatBoostClassifier object at 0x000001A316552C00>)])",0.6103515625,0.6355424743732874,0.6105357001571101
+rf,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=2)),
+                ('rf',
+                 RandomForestClassifier(max_depth=7, min_samples_leaf=30,
+                                        n_estimators=50, random_state=12345))])",0.6108940972222222,0.6313733552631579,0.611042917048139
+dt,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=2)),
+                ('dt',
+                 DecisionTreeClassifier(max_depth=5, min_samples_leaf=30,
+                                        random_state=12345))])",0.6083984375,0.6273618998451214,0.6085350898014084
+lr,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA()),
+                ('lr', LogisticRegression(random_state=12345))])",0.6890190972222222,0.6962052151791392,0.68908537067806
