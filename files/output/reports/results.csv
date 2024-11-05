@@ -1,16 +1,16 @@
 model,best_estimator,accuracy,f1,roc_auc
 lgbm,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=2)),
                 ('lgbm',
-                 LGBMClassifier(lambda_l1=1.0, max_depth=7, min_data_leaf=20,
-                                n_estimators=10, random_state=12345))])",0.6249188135960164,0.6483304577286105,0.6734814315053572
+                 LGBMClassifier(lambda_l1=0.5, max_depth=3, min_data_leaf=20,
+                                random_state=12345))])",0.6346678302607178,0.6496495449314782,0.6877979822675113
 xg,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=2)),
                 ('xg',
-                 XGBClassifier(alpha=1.0, base_score=None, booster=None,
+                 XGBClassifier(alpha=0, base_score=None, booster=None,
                                callbacks=None, colsample_bylevel=None,
                                colsample_bynode=None, colsample_bytree=None,
                                device=None, early_stopping_rounds=None,
                                enable_categorical=False, eval_metric=None,
-                               feature_types=None, gamma=0.1, grow_policy=None,
+                               feature_types=None, gamma=0.3, grow_policy=None,
                                importance_type=None,
                                interaction_constraints=None, learning_rate=None,
                                max_bin=None, max_cat_threshold=None,
@@ -19,18 +19,18 @@ xg,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=2)),
                                min_child_weight=None, missing=nan,
                                monotone_constraints=None, multi_strategy=None,
                                n_estimators=30, n_jobs=None,
-                               num_parallel_tree=None, ...))])",0.6263260445983979,0.654592755653392,0.6742991864120271
+                               num_parallel_tree=None, ...))])",0.6320497436456856,0.6505025385970366,0.6871800375312829
 cat,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=2)),
                 ('cat',
-                 <catboost.core.CatBoostClassifier object at 0x00000230606EFCE0>)])",0.6245940679800823,0.6491299069202752,0.6745292114717516
+                 <catboost.core.CatBoostClassifier object at 0x0000024540438C20>)])",0.6309588742227555,0.6439322176612988,0.6877989105055698
 rf,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=2)),
                 ('rf',
-                 RandomForestClassifier(max_depth=7, min_samples_leaf=20,
-                                        random_state=12345))])",0.6248105650573718,0.6471905537459284,0.6755086049761722
+                 RandomForestClassifier(max_depth=7, min_samples_leaf=10,
+                                        random_state=12345))])",0.6315043089342206,0.6449442926214001,0.6891861503835146
 dt,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA(n_components=2)),
                 ('dt',
-                 DecisionTreeClassifier(max_depth=5, min_samples_leaf=30,
-                                        random_state=12345))])",0.6222126001298982,0.6440228478172174,0.6688986245462308
+                 DecisionTreeClassifier(max_depth=5, min_samples_leaf=10,
+                                        random_state=12345))])",0.6317224828188066,0.6518869870076305,0.6829467007610885
 lr,"Pipeline(steps=[('scaler', StandardScaler()), ('pca', PCA()),
-                ('lr', LogisticRegression(random_state=12345))])",0.696795843256116,0.7028747215444998,0.7663110851876892
-keras,,0.5024897163888288,0.0,0.5
+                ('lr', LogisticRegression(random_state=12345))])",0.6992473000981783,0.7067957034988833,0.7676496850512068
+keras,,0.5033271517399367,0.0,0.5

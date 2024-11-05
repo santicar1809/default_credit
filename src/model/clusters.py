@@ -30,7 +30,6 @@ def clustering_data(data):
     ax.set_title('Numero de clusteres')
     ax.set_xlabel('Numero de clusteres')
     ax.set_ylabel('WCSS')
-    fig.show()
     fig.savefig(eda_path+'elbow_method.png')
 
     # Aplicamos Kmeans con 6 clusteres
@@ -118,7 +117,6 @@ def clustering_data(data):
         ax4.set_xlabel("limit_bal")
         ax4.set_ylabel("total_bill")
         plt.tight_layout()
-        fig4.show()
         fig4.savefig(eda_path+'dbscan_clusters_1.png')
 
     fig5,ax5=plt.subplots(figsize=(10,10))
@@ -139,7 +137,6 @@ def clustering_data(data):
         ax5.set_xlabel("limit_bal")
         ax5.set_ylabel("total_pay")
         plt.tight_layout()
-        fig5.show()
         fig5.savefig(eda_path+'dbscan_clusters_2.png')
 
     fig6,ax6=plt.subplots(figsize=(10,10))
@@ -160,7 +157,6 @@ def clustering_data(data):
         ax6.set_xlabel("limit_bal")
         ax6.set_ylabel("total_pay")
         plt.tight_layout()
-        fig6.show()
         fig6.savefig(eda_path+'dbscan_clusters_2.png')
 
     # Hierachical clustering
@@ -170,7 +166,7 @@ def clustering_data(data):
     ax7.set_title('Dendogram')
     plt.tight_layout()
     fig7.savefig(eda_path+'dendogram.png')
-    fig7.show()
+
 
     hierac=AgglomerativeClustering(n_clusters=6,linkage='ward')
     hierac.fit(features)
