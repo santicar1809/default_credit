@@ -11,7 +11,8 @@ test_path='./test/dataset/'
 if not os.path.exists(test_path):
     os.makedirs(test_path)
 
-def up_sampling(features,target,repeat):    
+def up_sampling(features,target,repeat):
+    seed=12345    
     features_zeros=features[target==0]
     features_ones=features[target==1]
     target_zeros=features[target==0]
@@ -24,6 +25,7 @@ def up_sampling(features,target,repeat):
     return features_upsampled,target_upsampled
 
 def downsampling(features,target,fraction):
+    seed=12345
     features_zeros=features[target==0]
     features_ones=features[target==1]
     target_zeros=features[target==0]
