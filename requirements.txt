@@ -1,0 +1,16 @@
+scikit-learn
+pandas
+numpy
+scipy
+matplotlib
+plotly_express
+plotly
+seaborn
+imbalanced-learn
+lightgbm
+xgboost
+catboost
+tensorflow
+joblib
+mpl-tools
+collection
